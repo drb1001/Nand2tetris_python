@@ -1,5 +1,5 @@
 import unittest
-from multibite_gates import *
+from multibit_gates import *
 
 
 class TestGatesFunctions(unittest.TestCase):
