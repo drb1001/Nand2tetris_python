@@ -25,3 +25,30 @@ def OR16(a16, b16):
             OR(a16[8],b16[8]), OR(a16[9],b16[9]), OR(a16[10],b16[10]), OR(a16[11],b16[11]),
             OR(a16[12],b16[12]), OR(a16[13],b16[13]), OR(a16[14],b16[14]), OR(a16[15],b16[15])
             ]
+
+
+def MUX16(a16, b16, sel):
+    return [
+            MUX(a16[0],b16[0],sel), MUX(a16[1],b16[1],sel), MUX(a16[2],b16[2],sel), MUX(a16[3],b16[3],sel),
+            MUX(a16[4],b16[4],sel), MUX(a16[5],b16[5],sel), MUX(a16[6],b16[6],sel), MUX(a16[7],b16[7],sel),
+            MUX(a16[8],b16[8],sel), MUX(a16[9],b16[9],sel), MUX(a16[10],b16[10],sel), MUX(a16[11],b16[11],sel),
+            MUX(a16[12],b16[12],sel), MUX(a16[13],b16[13],sel), MUX(a16[14],b16[14],sel), MUX(a16[15],b16[15],sel)
+            ]
+
+
+def OR8WAY(a8):
+    return OR( OR( OR( OR( OR( OR( OR(a8[0],a8[1]), a8[2]), a8[3]), a8[4]), a8[5]), a8[6]), a8[7])
+
+
+def MUX4WAY16(a16, b16, c16, d16, sel2):
+    return 0
+
+
+def MUX8WAY16(a16, b16, c16, d16, e16, f16, g16, h16, sel3):
+    return 0
+
+def DMUX4WAY(a, sel2):
+    return 0
+
+def DMUX8WAY(a, sel2):
+    return 0
