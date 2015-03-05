@@ -1,4 +1,4 @@
-from NAND import NAND
+from NAND import *
 
 
 # simple gates
