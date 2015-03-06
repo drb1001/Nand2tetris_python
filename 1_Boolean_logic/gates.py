@@ -28,4 +28,4 @@ def MUX(a,b,sel):
     return OR(AND(NOT(sel),a),AND(sel,b))
 
 def DMUX(a,sel):
-    return ( AND(a,NOT(sel)), AND(a,sel) )
+    return  ( AND(a,NOT(sel)) , AND(a,sel) )

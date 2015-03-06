@@ -49,10 +49,10 @@ class TestGatesFunctions(unittest.TestCase):
         self.assertEqual(MUX(1,1,1), 1)
 
     def test_DMUX(self):
-        self.assertEqual(DMUX(0,0), (0,0))
-        self.assertEqual(DMUX(1,0), (1,0))
-        self.assertEqual(DMUX(0,1), (0,0))
-        self.assertEqual(DMUX(1,1), (0,1))
+        self.assertEqual( (DMUX(0,0)), (0,0) )
+        self.assertEqual( (DMUX(0,1)), (0,0) )
+        self.assertEqual( (DMUX(1,0)), (1,0) )
+        self.assertEqual( (DMUX(1,1)), (0,1) )
 
 
 
