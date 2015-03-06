@@ -48,7 +48,21 @@ def MUX8WAY16(a16, b16, c16, d16, e16, f16, g16, h16, sel3):
     return 0
 
 def DMUX4WAY(a, sel2):
-    return 0
+    return (
+            AND( NOT(sel2[0]), DMUX(a,sel2[1])[0] ),
+            AND( NOT(sel2[0]), DMUX(a,sel2[1])[1] ),
+            AND( sel2[0], DMUX(a,sel2[1])[0] ),
+            AND( sel2[0], DMUX(a,sel2[1])[1] )
+            )
 
-def DMUX8WAY(a, sel2):
-    return 0
+def DMUX8WAY(a, sel3):
+    return (
+            AND( NOT(sel3[0]), DMUX4WAY(a,sel3[1:])[0] ),
+            AND( NOT(sel3[0]), DMUX4WAY(a,sel3[1:])[1] ),
+            AND( NOT(sel3[0]), DMUX4WAY(a,sel3[1:])[2] ),
+            AND( NOT(sel3[0]), DMUX4WAY(a,sel3[1:])[3] ),
+            AND( (sel3[0]), DMUX4WAY(a,sel3[1:])[0] ),
+            AND( (sel3[0]), DMUX4WAY(a,sel3[1:])[1] ),
+            AND( (sel3[0]), DMUX4WAY(a,sel3[1:])[2] ),
+            AND( (sel3[0]), DMUX4WAY(a,sel3[1:])[3] )
+            )
