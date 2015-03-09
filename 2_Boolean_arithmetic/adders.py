@@ -3,7 +3,7 @@ from mutlibit_gates import *
 
 
 def HalfAdder(a,b):
-    return (0,0)
+    return ( XOR(a,b), AND(a,b) )
 
 def FullAdder(a,b,c):
     return (0,0,0)
