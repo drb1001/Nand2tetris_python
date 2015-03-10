@@ -1,5 +1,6 @@
 from gates import *
 
+
 # Multibit gates
 
 def NOT16(a16):
