@@ -1,6 +1,5 @@
 import unittest
-from gates import *
-from mutlibit_gates import *
+from ALU import *
 
 
 class TestGatesFunctions(unittest.TestCase):

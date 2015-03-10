@@ -1,6 +1,4 @@
-from gates import *
-from mutlibit_gates import *
-
+from ..1_Boolean_logic.multibit_gates import *
 
 def HalfAdder(a,b):
     return ( XOR(a,b), AND(a,b) )

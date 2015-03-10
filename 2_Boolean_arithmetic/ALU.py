@@ -1,5 +1,4 @@
-from gates import *
-from mutlibit_gates import *
+from adders import *
 
 def ALU_nostat( x16, y16, zx, nx, zy, ny, f, no ):
     return 0
