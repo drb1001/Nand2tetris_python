@@ -82,7 +82,14 @@ def MUX4WAY16(a16, b16, c16, d16, sel2):
 
 
 def MUX8WAY16(a16, b16, c16, d16, e16, f16, g16, h16, sel3):
-    return 0
+
+    return MUX16(
+        MUX4WAY16( a16, b16, c16, d16, sel3[1:] ),
+        MUX4WAY16( e16, f16, g16, h16, sel3[1:] ),
+        sel3[0]
+        )
+
+
 
 def DMUX4WAY(a, sel2):
     return (
