@@ -1,7 +1,7 @@
 import unittest
 from NAND import *
 
-class TestGatesFunctions(unittest.TestCase):
+class TestNandFunction(unittest.TestCase):
 
     def test_NAND(self):
         self.assertEqual(NAND(0,0), 1)

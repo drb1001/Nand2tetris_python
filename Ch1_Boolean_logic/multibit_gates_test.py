@@ -2,7 +2,7 @@ import unittest
 from multibit_gates import *
 
 
-class TestGatesFunctions(unittest.TestCase):
+class TestMultibitGatesFunctions(unittest.TestCase):
 
 
     def test_NOT16(self):

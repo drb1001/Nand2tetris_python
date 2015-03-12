@@ -2,7 +2,7 @@ import unittest
 from adders import *
 
 
-class TestGatesFunctions(unittest.TestCase):
+class TestAddersFunctions(unittest.TestCase):
 
     def test_HalfAdder(self):
         self.assertEqual( HalfAdder(0,0), (0,0) )

@@ -2,7 +2,7 @@ import unittest
 from ALU import *
 
 
-class TestGatesFunctions(unittest.TestCase):
+class TestALUFunctions(unittest.TestCase):
 
     def test_ALU_nostat(self):
         self.assertEqual( ALU_nostat( [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 1, 0, 1, 0, 1, 0 ) , [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,] )

@@ -2,7 +2,7 @@ import unittest
 from DFF import *
 
 
-class TestGatesFunctions(unittest.TestCase):
+class TestRegisterFunctions(unittest.TestCase):
 
 
     def test_bit(self):
