@@ -4,7 +4,10 @@ def HalfAdder(a,b):
     return ( XOR(a,b), AND(a,b) )
 
 def FullAdder(a,b,c):
-    return (0,0,0)
+    return (
+        HalfAdder( HalfAdder(a,b)[0], c )[0] ,
+        OR( HalfAdder(a,b)[1] , HalfAdder( HalfAdder(a,b)[0], c )[1] )
+        )
 
 def Add16(a16,b16):
     return a16
