@@ -42,7 +42,43 @@ def OR8WAY(a8):
 
 
 def MUX4WAY16(a16, b16, c16, d16, sel2):
-    return 0
+
+    return (
+        OR16(
+
+            OR16(
+
+                OR16(
+
+                    AND16(
+                        AND16( a16, NOT16([ sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0] ]) )
+                        ,
+                        NOT16([ sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1] ])
+                    )
+                    ,
+
+                    AND16(
+                        AND16( b16, NOT16([ sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0] ]) )
+                        ,
+                        [ sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1] ]
+                    )
+                )
+                ,
+
+                AND16(
+                    AND16( c16, [ sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0] ] )
+                    ,
+                    NOT16([ sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1] ])
+                )
+            ),
+
+            AND16(
+                AND16( d16, [ sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0],sel2[0] ] )
+                ,
+                [ sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1],sel2[1] ]
+            )
+        )
+    )
 
 
 def MUX8WAY16(a16, b16, c16, d16, e16, f16, g16, h16, sel3):
