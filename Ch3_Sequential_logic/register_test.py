@@ -5,7 +5,7 @@ from DFF import *
 class TestGatesFunctions(unittest.TestCase):
 
 
-    def test_bit():
+    def test_bit(self):
         return 0
 #
 # | time | in  |load | out |
@@ -229,6 +229,5 @@ class TestGatesFunctions(unittest.TestCase):
 
 
 
-
-    def test_register():
+    def test_register(self):
         return 0
