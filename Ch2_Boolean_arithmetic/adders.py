@@ -13,4 +13,4 @@ def Add16(a16,b16):
     return a16
 
 def Inc16(a16):
-    return a16
+    return Add16(a16,[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1])
