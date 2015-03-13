@@ -4,7 +4,7 @@ from NAND import *
 # simple gates
 
 def NOT(a):
-    return NAND(1,a)
+    return NAND(a,a)
 
 def AND(a,b):
     return NOT(NAND(a,b))
