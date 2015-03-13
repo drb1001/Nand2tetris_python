@@ -38,4 +38,5 @@ def Add16(a16,b16):
 
 
 def Inc16(a16):
+    # would be better if didn't use a hard coded array
     return Add16( a16, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1] )
