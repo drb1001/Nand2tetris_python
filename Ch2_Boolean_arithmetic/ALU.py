@@ -50,4 +50,11 @@ def ALU_nostat( x16, y16, zx, nx, zy, ny, f, no ):
 
 
 def ALU( x16, y16, zx, nx, zy, ny, f, no ):
-    return 0
+    return (
+        ALU_nostat( x16, y16, zx, nx, zy, ny, f, no ),
+        NOR(
+            OR8WAY( ALU_nostat( x16, y16, zx, nx, zy, ny, f, no )[:8] ) ,
+            OR8WAY( ALU_nostat( x16, y16, zx, nx, zy, ny, f, no )[8:] )
+            ),
+        ALU_nostat( x16, y16, zx, nx, zy, ny, f, no )[0]
+        )
