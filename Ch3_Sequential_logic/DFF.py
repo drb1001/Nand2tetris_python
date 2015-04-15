@@ -1,5 +1,15 @@
-def DFF(a,t):
-    return (a,t+1)
+import time
+
+
+def clock(start, end, delay = 1):
+    
+    sleep(delay)
+
+
+def DFF(a, time, delay = 0):
+
+    if time < 0: time = 0
+    return (a, time + 1)
 
 
 # NOTES:
